@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/6da8967013.js"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calendar</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calendar__header">
+        <div class="calendar__header--month">
+          <span class="prev__button"><i class="fas fa-arrow-left"></i></span>
+          <div id="monthDisplay"></div>
+          <span class="next__button"><i class="fas fa-arrow-right"></i></span>
+        </div>
+
+        <div class="calendar__header--buttons">
+          <span class="button4"> Today </span>
+          <span class="cal_icon"><i class="far fa-calendar"></i></span>
+        </div>
+      </div>
+
+      <div class="calendar__weekdays">
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+      </div>
+
+      <div class="calender__container">
+        <div id="calendar__app"></div>
+
+        <!-- <div class="calendar__taskbar">
+          <h2 class="taskbar__header">scheduled tasks</h2>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="schedule__modal hidden">
+      <button class="schedule__modal--close">&times;</button>
+      <div class="schedule__header">
+        Please register equipment for maintenance
+      </div>
+      <form action="" class="schedule__form">
+        <label for="equipment">Equipment</label>
+        <input class="inputEquipment" name="equipment" />
+        <label for="modelID">Model #</label>
+        <input class="inputModelID" name="modelID" />
+        <label for="dateAcquired">Date acquired</label>
+        <input
+          type="date"
+          class="inputDateAcquired"
+          id="dateField"
+          name="dateAcquired"
+          min="2000-01-01"
+          max="2021-01-01"
+        />
+        <!-- <label for="Repeat Event">Repeat event</label>
+        <div class="wrapper__repeat">        
+          <input type="radio" class="inputWeekly" name="eventSelect" id='weekly_Schedule' value="weekly">
+          <label for="weekly">weekly</label>
+
+          <input type="radio" class="inputMonthly" name="eventSelect" id='monthly_Schedule' value="monthly">
+          <label for="monthly">monthly</label>
+
+          <input type="radio" class="inputYearly" name="eventSelect" id='yearly_Schedule' value="yearly">
+          <label for="yearly">yearly</label>
+        </div> -->
+        <button class="btn">Submit</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
